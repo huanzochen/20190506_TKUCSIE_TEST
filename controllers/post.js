@@ -13,7 +13,7 @@ exports.getPosts = (req, res, next) => {
             }
             console.log(JSON.stringify(rows, ["id", "title", "date"]));
             //res.send(JSON.stringify(rows));
-            res.render('posts', {
+            res.render('blogen/posts', {
                 data: rows,
                 title: 'Post List',
             });
