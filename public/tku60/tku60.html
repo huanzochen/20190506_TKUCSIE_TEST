@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> TKU60 </title>
+    <meta charset="uft-8">
+    <style>
+        #container {
+            width: 630px;
+            height: 100%;
+            margin: 10px auto;
+            background-color: rgba(17, 37, 147);
+            border: 5px solid purple;
+        }
+        
+        h1{
+            text-align: center;
+            background-color: #bcac58;
+            margin: 0px;
+            padding: 10px;
+        }
+        #player {
+            width: 630px;
+            height: 100%;
+            background-color: black;
+        }
+        
+        #tku60btn {
+            width: 630px;
+            background-color:#e6c583;
+        }
+        
+        button {      
+            text-align: center;
+            display: inline-block;
+            font-size: 13px;
+            margin: 5px 5px;
+            cursor: pointer;
+        }
+    </style>
+    
+    <script>
+        function play(index){
+            var p = document.getElementById("player");
+            switch (index){
+                case 1:
+                    p.innerHTML = '<iframe width="630" height="480" src="https://www.youtube.com/embed/RechrtUxfQc" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                    
+                case 2:
+                    p.innerHTML = '<iframe width="630" height="480" src="https://www.youtube.com/embed/MRWX49Furew" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                    
+                case 3:
+                    p.innerHTML = '<iframe width="630" height="480" src="https://www.youtube.com/embed/METhdbL_iMw" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                   
+                case 4:
+                    p.innerHTML = '<iframe width="630" height="480" src="https://www.youtube.com/embed/ZyDbq-lEKTo" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                    
+                case 5:
+                    p.innerHTML = '<iframe width="630" height="480" src="https://www.youtube.com/embed/NlsrJbVvjaA" frameborder="0" allowfullscreen></iframe>';
+                    break;    
+            }
+            
+        }
+    </script>
+</head>
+
+<body onload="play(1)">
+    <div id="container">
+        <h1>淡江大學 60 周年特別製作</h1>
+        <div id="tku60btn">
+            <button onclick="play(1)">淡江大戲01</button>
+            <button onclick="play(2)">淡江大戲02</button>
+            <button onclick="play(3)">淡江大戲03</button>
+            <button onclick="play(4)">淡江大戲04</button>
+            <button onclick="play(5)">淡江大戲05</button>   
+        </div>
+        <div id="player"></div>    
+    </div>
+
+</body>
+
+</html>
